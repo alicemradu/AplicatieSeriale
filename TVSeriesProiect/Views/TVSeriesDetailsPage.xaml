@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TVSeriesProiect.Views.TVSeriesDetailsPage"
+             Title="Serie Details"
+             BackgroundColor="#171717">
+
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="15">
+
+            <!-- img -->
+            <Image
+                x:Name="img_aboutTVSerie"
+                Aspect="AspectFit"
+                HeightRequest="200"
+                Margin="0,0,0,10"
+                BackgroundColor="#333333" />
+
+            <!-- titlu si durata -->
+            <Frame
+                BackgroundColor="#DA0037"
+                CornerRadius="15"
+                Padding="15"
+                HasShadow="True">
+                <StackLayout Spacing="5" HorizontalOptions="CenterAndExpand">
+
+                    <Label
+                        x:Name="labelTitle_aboutTVSerie"
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center" />
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Image
+                            Source="time.png"
+                            WidthRequest="20"
+                            HeightRequest="20"
+                            Margin="0,0,5,0" />
+                        <Label
+                            x:Name="labelTime_aboutTVSerie"
+                            FontAttributes="Bold"
+                            FontSize="14"
+                            TextColor="White" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- detalii generale -->
+            <Grid ColumnDefinitions="*,*,*"
+                  RowDefinitions="Auto,Auto"
+                  ColumnSpacing="15"
+                  Margin="0,10,0,10">
+
+                <!-- data lansare -->
+                <Label
+                    Grid.Row="0" Grid.Column="0"
+                    Text="Released"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    TextColor="#DA0037" />
+                <Label
+                    Grid.Row="1" Grid.Column="0"
+                    x:Name="labelReleased_aboutTVSerie"
+                    FontSize="14"
+                    TextColor="White" />
+
+                <!-- limba -->
+                <Label
+                    Grid.Row="0" Grid.Column="1"
+                    Text="Language"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    TextColor="#DA0037" />
+                <Label
+                    Grid.Row="1" Grid.Column="1"
+                    x:Name="labelLanguage_aboutTVSerie"
+                    FontSize="14"
+                    TextColor="White" />
+
+                <!-- gen -->
+                <Label
+                    Grid.Row="0" Grid.Column="2"
+                    Text="Genre"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    TextColor="#DA0037" />
+                <Label
+                    Grid.Row="1" Grid.Column="2"
+                    x:Name="labelGenre_aboutTVSerie"
+                    FontSize="14"
+                    TextColor="White" />
+            </Grid>
+
+            <!-- actori -->
+            <Label
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Actors:"
+                TextColor="#DA0037" />
+            <Label
+                x:Name="spanActors_TVSeriePage"
+                FontSize="14"
+                TextColor="White"
+                LineBreakMode="WordWrap" />
+
+            <!-- rating -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="5">
+                <Image Source="star.png" WidthRequest="20" HeightRequest="20" />
+                <Label
+                    x:Name="labelRating_TVSeriePage"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    TextColor="Yellow" />
+            </StackLayout>
+
+            <!-- voturi -->
+            <Label
+                x:Name="labelVotes_TVSeriePage"
+                FontAttributes="Bold"
+                FontSize="16"
+                TextColor="#DA0037"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Descriere -->
+            <StackLayout>
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Description:"
+                    TextColor="#DA0037" />
+                <Label
+                    x:Name="spanDescription_TVSeriePage"
+                    FontSize="14"
+                    TextColor="White"
+                    LineBreakMode="WordWrap" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

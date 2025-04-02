@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TVSeriesProiect.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TVSeriesProiect.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="TVSeriesProiect"
+    BackgroundColor="#171717"
+    Shell.TitleColor="White"
+    Shell.ForegroundColor="White">
+
+    <ShellContent
+        Title="About Us"   
+        ContentTemplate="{DataTemplate local:WelcomePage}"
+        Route="WelcomePage" />
+
+    <ShellContent
+        Title="Top 50 TV Series"
+        ContentTemplate="{DataTemplate local:TVSeriesListPage}"
+        Route="TVSeriesListPage" />
+
+    <ShellContent
+        Title="Popular Actors"
+        ContentTemplate="{DataTemplate local:ActorListPage}"
+        Route="ActorListPage" />
+    
+    <ShellContent
+    Title="Our Statistics"
+    ContentTemplate="{DataTemplate local:StatisticsPage}"
+    Route="StatisticsPage" />
+</Shell>

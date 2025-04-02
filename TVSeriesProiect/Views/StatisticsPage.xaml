@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:charts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             x:Class="TVSeriesProiect.Views.StatisticsPage"
+             Title="Top TV Series"
+             BackgroundColor="#171717">
+
+    <VerticalStackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Picker 
+                x:Name="pickerNumber"
+                Title="Top"
+                HorizontalOptions="CenterAndExpand"
+                SelectedIndexChanged="pickerNumber_SelectedIndexChanged"
+                TextColor="White"
+                Margin="10"/>
+            <Picker 
+                x:Name="genrePicker"
+                Title="Genre"
+                TextColor="White"
+                HorizontalOptions="CenterAndExpand"
+                SelectedIndexChanged="genrePicker_SelectedIndexChanged"
+                Margin="10"/>
+        </StackLayout>
+
+        <charts:ChartView x:Name="tvChart" 
+                          VerticalOptions="Fill"
+                          WidthRequest="800" HeightRequest="500"/>
+    </VerticalStackLayout>
+</ContentPage>
